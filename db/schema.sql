@@ -1,0 +1,32 @@
+-- Drops the "employee_management_system_db" if it currenlty exits.
+DROP DATABASE IF EXISTS employee_management_system_db;
+
+-- Create the "employee_management_system_db" database.
+CREATE DATABASE employee_management_system_db;
+
+-- Makes it so all of the following code will affect the "employee_management_system_db" database.
+USE employee_management_system_db;
+
+-- Creates a new table named "department" with a primary key that auto-increments, and a name field.
+CREATE TABLE department (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+);
+
+-- Creates a new table name "role" with a primary key that auto-increments, a title, salary and department id fields.
+CREATE TABLE role (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(30) NOT NULL,
+    salary DECIMAL(9,2),
+    department_id INT,
+);
+
+-- Creates a new table name "employee" with a primary key that auto-increments, a first name, last name and role id, and manager id fields.
+CREATE TABLE employee (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    first_name VARCHAR(30),
+    last_name VARCHAR(30),
+    role_id INT NOT NULL,
+    manager_id INT,
+    FOREIGN KEY (manager_id) REFERENCES employee(id)
+);
