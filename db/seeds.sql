@@ -33,6 +33,23 @@ INSERT INTO role (title, salary, department_id) VALUES
     ("Sales Representative", 55000, 9),
     ("Specimen Accessioner", 30000, 1),
 
-
-
-
+-- EMPLOYEES
+-- Inserts employee information into employee table.
+INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
+    ("Kenneth", "Petiote", 1,),
+    ("Alfred", "Nobel", 2),
+    ("Albert", "Einstein", 3),
+    ("Marie", "Currie", 4),
+    ("Isaac", "Newton", 5),
+    ("Charles", "Darwin", 6),
+    ("Nikola", "Tesla", 7),
+    ("Galileo", "Galilei", 8),
+    ("Ada", "Lovelace", 9),
+    ("Carl", "Linnaeus", 10),
+    ("Rosalind", "Franklin", 11),
+    ("Isaac", "Asimov", 12),
+    ("Richard", "Feynman", 13),
+    ("Robert", "FitzRoy", 14),
+    ("Jean-Baptiste", "Lamarck", 15),
+    ("Katharine", "McCormick", 16),
+    ("John", "Muir", 17),
