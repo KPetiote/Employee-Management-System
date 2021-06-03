@@ -10,12 +10,14 @@ USE employee_management_system_db;
 -- Creates a new table named "department" with a primary key that auto-increments, and a name field.
 CREATE TABLE department (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    -- Makes a string column called "name" which cannot contain null.
     name VARCHAR(30) NOT NULL,
 );
 
 -- Creates a new table name "role" with a primary key that auto-increments, a title, salary and department id fields.
 CREATE TABLE role (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    -- Makes a string column called "title" which cannot contain null.
     title VARCHAR(30) NOT NULL,
     salary DECIMAL(9,2),
     department_id INT,
@@ -24,9 +26,12 @@ CREATE TABLE role (
 -- Creates a new table name "employee" with a primary key that auto-increments, a first name, last name and role id, and manager id fields.
 CREATE TABLE employee (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    -- Makes a sting column called "first_name"
     first_name VARCHAR(30),
+    -- Makes a sting column called "last_name"
     last_name VARCHAR(30),
     role_id INT NOT NULL,
+    -- Makes an numeric column called "manager_id"
     manager_id INT,
     FOREIGN KEY (manager_id) REFERENCES employee(id)
 );
