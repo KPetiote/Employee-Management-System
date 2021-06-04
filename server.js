@@ -109,7 +109,7 @@ function viewAllEmployeesByDepartment() {
 
 // Function to View All Employees by Manager.
 function viewAllEmployeesbyManager() {
-    connection.query("SELECT * FROM role", (err, data) => {
+    connection.query("SELECT employee.first_name, employee.last_name, role.title AS Title FROM employee JOIN role ON employee.role_id = role.id;", (err, data) => {
         if (err) throw err;
         console.log("Displaying All Roles:");
         console.table(data);
