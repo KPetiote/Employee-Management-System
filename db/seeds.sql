@@ -4,15 +4,15 @@ USE employee_management_system_db;
 -- DEPARTMENTS
 -- Inserts department information into department table. 
 INSERT INTO department (name) VALUES
-    (Accessioning) /*1*/
-    (Accounting) /*2*/
-    (Billing) /*3*/
-    (Laboratory) /*4*/
-    (Human Resources) /*5*/
-    (Information Technology) /*6*/
-    (Management) /*7*/
-    (Phlebotomy) /*8*/
-    (Sales) /*9*/
+    ("Accessioning"), 
+    ("Accounting"), 
+    ("Billing"), 
+    ("Laboratory"),
+    ("Human Resources"), 
+    ("Information Technology"), 
+    ("Management"), 
+    ("Phlebotomy"), 
+    ("Sales"); 
 
 -- ROLES
 -- Inserts role information into role table. 
@@ -23,26 +23,26 @@ INSERT INTO role (title, salary, department_id) VALUES
     ("Client Services", 50000, 9),
     ("Medical Technologists", 50000, 4),
     ("HR Manager", 1000000, 5),
-    ("IT Manager", 90000, 6,),
+    ("IT Manager", 90000, 6),
     ("IT Technician", 65000, 6),
     ("Laboratory Director", 200000, 7),
     ("Laboratory Manager", 90000, 7),
     ("Laboratory Supervisor", 75000, 4),
-    ("Phlebotomist," 35000, 8),
+    ("Phlebotomist", 35000, 8),
     ("Phlebotomy Manager", 60000, 8),
     ("Sales Representative", 55000, 9),
-    ("Specimen Accessioner", 30000, 1),
+    ("Specimen Accessioner", 30000, 1);
 
 -- EMPLOYEES
 -- Inserts employee information into employee table.
 INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
-    ("Kenneth", "Petiote", 1, 9),
-    ("Alfred", "Nobel", 2, 3),
-    ("Albert", "Einstein", 3, 10),
-    ("Marie", "Currie", 4, 13),
-    ("Isaac", "Newton", 5, 11),
-    ("Charles", "Darwin", 6, 7),
-    ("Nikola", "Tesla", 7, 6),
+    ("Kenneth", "Petiote", 1, NULL),
+    ("Alfred", "Nobel", 2, NULL),
+    ("Albert", "Einstein", 3, NULL),
+    ("Marie", "Currie", 4, NULL),
+    ("Isaac", "Newton", 5, NULL),
+    ("Charles", "Darwin", 6, NULL),
+    ("Nikola", "Tesla", 7, NULL),
     ("Galileo", "Galilei", 8, NULL),
     ("Ada", "Lovelace", 9, NULL),
     ("Carl", "Linnaeus", 10, NULL),
@@ -52,4 +52,4 @@ INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
     ("Robert", "FitzRoy", 14, NULL),
     ("Jean-Baptiste", "Lamarck", 15, NULL),
     ("Katharine", "McCormick", 16, NULL),
-    ("John", "Muir", 17, NULL),
+    ("John", "Muir", 17, NULL);
