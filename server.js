@@ -1,5 +1,6 @@
 // DEPENDENCIES
 // ---------------------------------------------------------------------------
+
 const mysql2 = require("mysql2");
 const figlet = require("figlet");
 const inquirer = require("inquirer");
@@ -58,7 +59,7 @@ function start() {
                 break;
 
             case "View All Employees by Manager":
-                viewAllEmployeesbyManager();
+                viewAllEmployeesByManager();
                 break;
 
             case "Add A New Department":
@@ -89,7 +90,7 @@ function start() {
 
 // Function to View All Employees.
 function viewAllEmployees() {
-    connection.query("SELECT employee.first_name, employee.last_name, role.title, role.salary, department.name, CONCAT(e.first_name, ' ' ,e.last_name) AS Manager FROM employee INNER JOIN role on role.id = employee.role_id INNER JOIN department on department.id = role.department_id left join employee e on employee.manager_id = e.id;", (err, data) => {
+    connection.query("SELECT employee.first_name, employee.last_name, role.title, role.salary, department.name, CONCAT(e.first_name, ' ' ,e.last_name) AS manager FROM employee INNER JOIN role on role.id = employee.role_id INNER JOIN department on department.id = role.department_id left join employee e on employee.manager_id = e.id;", (err, data) => {
         if (err) throw err;
         console.log("Displaying All :");
         console.table(data);
@@ -99,7 +100,7 @@ function viewAllEmployees() {
 
 // Function to View All Employees by Department.
 function viewAllEmployeesByDepartment() {
-    connection.query("SELECT employee.first_name, employee.last_name, department.name AS Department FROM employee JOIN role ON employee.role_id = role.id JOIN department ON role.department_id = department.id ORDER BY employee.id;", (err, data) => {
+    connection.query("SELECT employee.first_name, employee.last_name, department.name AS department FROM employee JOIN role ON employee.role_id = role.id JOIN department ON role.department_id = department.id ORDER BY employee.id;", (err, data) => {
         if (err) throw err;
         console.log("Displaying All Departments:");
         console.table(data);
@@ -108,11 +109,12 @@ function viewAllEmployeesByDepartment() {
 }
 
 // Function to View All Employees by Manager.
-function viewAllEmployeesbyManager() {
-    connection.query("SELECT employee.first_name, employee.last_name, role.title AS Title FROM employee JOIN role ON employee.role_id = role.id;", (err, data) => {
+function viewAllEmployeesByManager() {
+    connection.query("SELECT e.id, CONCAT(e.first_name, ' ', e.last_name) AS 'employee name', CONCAT(m.first_name, ' ', m.last_name) AS 'manager' FROM employee e LEFT JOIN employee m ON e.manager_id = m.role_id JOIN role r ON e.role_id = r.id JOIN department d ON r.department_id = d.id;", (err, data) => {
         if (err) throw err;
         console.log("Displaying All Roles:");
         console.table(data);
         start();
     });
 }
+

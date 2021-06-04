@@ -3,7 +3,7 @@ USE employee_management_system_db;
 
 -- DEPARTMENTS
 -- Inserts department information into department table. 
-INSERT INTO department (name) VALUES
+INSERT INTO department (department) VALUES
     ("Accessioning"), 
     ("Accounting"), 
     ("Billing"), 
@@ -22,8 +22,8 @@ INSERT INTO role (title, salary, department_id) VALUES
     ("Chief Information Officer", 2500000, 7),
     ("Chief Compliance Officer", 2000000, 7),
     ("Accountant", 50000, 2),
-    ("Billing Specialist", 50000, 3),
     ("Billing Manager", 90000, 3),
+    ("Billing Specialist", 50000, 3),
     ("Client Services", 50000, 9),
     ("Medical Technologists", 50000, 4),
     ("HR Manager", 1000000, 5),
@@ -32,8 +32,8 @@ INSERT INTO role (title, salary, department_id) VALUES
     ("Laboratory Director", 200000, 7),
     ("Laboratory Manager", 90000, 7),
     ("Laboratory Supervisor", 75000, 4),
-    ("Phlebotomist", 35000, 8),
     ("Phlebotomy Manager", 60000, 8),
+    ("Phlebotomist", 35000, 8),
     ("Sales Representative", 55000, 9),
     ("Specimen Accessioner", 30000, 1);
 
@@ -41,21 +41,21 @@ INSERT INTO role (title, salary, department_id) VALUES
 -- Inserts employee information into employee table.
 INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
     ("Kenneth", "Petiote", 1, NULL),
-    ("Nikola", "Tesla", 2, NULL),
-    ("Albert", "Einstein", 3, NULL),
-    ("Marie", "Currie", 4, NULL),
-    ("Richard", "Feynman", 5, NULL),
-    ("Charles", "Darwin", 6, NULL),
-    ("Alfred", "Nobel", 7, NULL),
-    ("Galileo", "Galilei", 8, NULL),
-    ("Ada", "Lovelace", 9, NULL),
-    ("Carl", "Linnaeus", 10, NULL),
-    ("Rosalind", "Franklin", 11, NULL),
-    ("Isaac", "Asimov", 12, NULL),
-    ("Isaac", "Newton", 13, NULL),
-    ("Robert", "FitzRoy", 14, NULL),
-    ("Jean-Baptiste", "Lamarck", 15, NULL),
-    ("Katharine", "McCormick", 16, NULL),
-    ("John", "Muir", 17, NULL),
-    ("Richard", "Dawkins", 18, NULL),
-    ("Bill", "Nye", 19, NULL);
+    ("Nikola", "Tesla", 2, 1),
+    ("Albert", "Einstein", 3, 1),
+    ("Marie", "Currie", 4, 1),
+    ("Richard", "Feynman", 5, 2),
+    ("Charles", "Darwin", 6, 5),
+    ("Alfred", "Nobel", 7, 6),
+    ("Galileo", "Galilei", 8, 4),
+    ("Ada", "Lovelace", 9, 4),
+    ("Carl", "Linnaeus", 10, 1),
+    ("Rosalind", "Franklin", 11, 3),
+    ("Isaac", "Asimov", 12, 11),
+    ("Isaac", "Newton", 13, 1),
+    ("Robert", "FitzRoy", 14, 13),
+    ("Jean-Baptiste", "Lamarck", 15, 14),
+    ("Katharine", "McCormick", 16, 4),
+    ("John", "Muir", 17, 16),
+    ("Richard", "Dawkins", 18, 5),
+    ("Bill", "Nye", 19, 16);
