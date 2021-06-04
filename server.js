@@ -54,11 +54,11 @@ function start() {
                 break;
 
             case "View All Employees by Department":
-                viewAllDepartments();
+                viewAllEmployeesByDepartment();
                 break;
 
             case "View All Employees by Manager":
-                viewAllRoles();
+                viewAllEmployeesbyManager();
                 break;
 
             case "Add A New Department":
@@ -81,5 +81,38 @@ function start() {
                 connection.end();
                 break;
         }
+    });
+}
+
+// FUNCTIONS TO VIEW
+// ---------------------------------------------------------------------------
+
+// Function to View All Employees.
+function viewAllEmployees() {
+    connection.query("SELECT employee.first_name, employee.last_name, role.title, role.salary, department.name, CONCAT(e.first_name, ' ' ,e.last_name) AS Manager FROM employee INNER JOIN role on role.id = employee.role_id INNER JOIN department on department.id = role.department_id left join employee e on employee.manager_id = e.id;", (err, data) => {
+        if (err) throw err;
+        console.log("Displaying All :");
+        console.table(data);
+        start();
+    });
+}
+
+// Function to View All Employees by Department.
+function viewAllEmployeesByDepartment() {
+    connection.query("SELECT employee.first_name, employee.last_name, department.name AS Department FROM employee JOIN role ON employee.role_id = role.id JOIN department ON role.department_id = department.id ORDER BY employee.id;", (err, data) => {
+        if (err) throw err;
+        console.log("Displaying All Departments:");
+        console.table(data);
+        start();
+    });
+}
+
+// Function to View All Employees by Manager.
+function viewAllEmployeesbyManager() {
+    connection.query("SELECT * FROM role", (err, data) => {
+        if (err) throw err;
+        console.log("Displaying All Roles:");
+        console.table(data);
+        start();
     });
 }

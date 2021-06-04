@@ -21,6 +21,10 @@ INSERT INTO role (title, salary, department_id) VALUES
     ("Billing Specialist", 50000, 3),
     ("Billing Manager", 90000, 3),
     ("Client Services", 50000, 9),
+    ("Chief Executive Officer", 6000000, 7),
+    ("Chief Operating Officer", 3000000, 7),
+    ("Chief Information Officer", 2500000, 7),
+    ("Chief Compliance Officer", 2000000, 7)
     ("Medical Technologists", 50000, 4),
     ("HR Manager", 1000000, 5),
     ("IT Manager", 90000, 6),
@@ -36,13 +40,13 @@ INSERT INTO role (title, salary, department_id) VALUES
 -- EMPLOYEES
 -- Inserts employee information into employee table.
 INSERT INTO employee (first_name, last_name, role_id, manager_id) VALUES
-    ("Kenneth", "Petiote", 1, NULL),
-    ("Alfred", "Nobel", 2, NULL),
-    ("Albert", "Einstein", 3, NULL),
-    ("Marie", "Currie", 4, NULL),
+    ("Kenneth", "Petiote", 5, NULL),
+    ("Alfred", "Nobel", 10, 5),
+    ("Albert", "Einstein", 7, 5),
+    ("Marie", "Currie", 8, 5),
     ("Isaac", "Newton", 5, NULL),
     ("Charles", "Darwin", 6, NULL),
-    ("Nikola", "Tesla", 7, NULL),
+    ("Nikola", "Tesla", 6, 5),
     ("Galileo", "Galilei", 8, NULL),
     ("Ada", "Lovelace", 9, NULL),
     ("Carl", "Linnaeus", 10, NULL),

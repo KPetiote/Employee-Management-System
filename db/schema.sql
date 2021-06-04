@@ -37,6 +37,6 @@ CREATE TABLE employee (
     role_id INT NOT NULL,
     -- Makes an numeric column called "manager_id".
     manager_id INT,
-    FOREIGN KEY (manager_id) REFERENCES role(id),
+    FOREIGN KEY (manager_id) REFERENCES employee(id),
     FOREIGN KEY (role_id) REFERENCES role(id)
 );
