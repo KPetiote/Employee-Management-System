@@ -18,7 +18,7 @@ Users are allowed to add, remove or view employees, departments or employee titl
 Upon refreshing, the data that was recently created will be there, and can be deleted or viewed.
 
 ## Demo
-![Alt text](./public/assets/images/employee-management-system-website.gif "Employee-Management-System")
+![Alt text](assets/images/employee-management-system-website.gif "Employee-Management-System")
  
 ## Program Installation
 To use this program we will need to install Node.js & MySQL Workbench.\
