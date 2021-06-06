@@ -23,7 +23,7 @@ const connection = mysql2.createConnection({
 
 connection.connect(err => {
     if (err) throw err;
-    console.log('connection successfully established!');
+    console.log('Connection Successfully Established!');
     start();
 });
 
@@ -98,7 +98,7 @@ function start() {
 function viewAllEmployees() {
     connection.query("SELECT employee.first_name, employee.last_name, role.title, role.salary, department.name, CONCAT(e.first_name, ' ' ,e.last_name) AS manager FROM employee INNER JOIN role on role.id = employee.role_id INNER JOIN department on department.id = role.department_id left join employee e on employee.manager_id = e.id;", (err, data) => {
         if (err) throw err;
-        console.log("Displaying All :");
+        console.log("Displaying All Employees Information:");
         console.table(data);
         start();
     });
@@ -328,6 +328,7 @@ function removeEmployee() {
             if (err) throw err;
             start();
         });
+        console.log(`Employee has been deleted`);
     });
 }
 
