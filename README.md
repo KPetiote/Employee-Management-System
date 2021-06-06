@@ -34,7 +34,7 @@ These two files are located in the links below:
 
 [Seeds](db/seeds.sql)
 
-Once loaded in the database use your command-line interface\ 
+Once loaded in the database use your command-line interface\
 (Terminal - MACOSX & Linux, CMD - Windows)\
 to run browse to the main repository, then run the following command:
 
