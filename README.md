@@ -23,14 +23,15 @@ Upon refreshing, the data that was recently created will be there, and can be de
 To use this program we will need to install Node.js & MySQL Workbench.
 Pleas use the link below to find a suitable version for your OS:
 
-https://nodejs.org/en/download/
+[Node.js Downloads](https://nodejs.org/en/download/)
 
-https://dev.mysql.com/downloads/workbench/
+[MySQL Workbench Downloads](https://dev.mysql.com/downloads/workbench/)
 
-Once installed we can load the pre-defined "schema.sql & seeds.sql" to populate the database.
+Once installed we can load the pre-defined Schema & Seeds to populate the database.
 These two files are located in the links below:
 
-![Schema](db/schema.sql)
+[Schema](db/schema.sql)
+[Seeds](db/seeds.sql)
 
 Once loaded in the database use your command-line interface (Terminal - MACOSX, CMD - Windows)
 to run browse to the main repository, then run the following command:
