@@ -60,4 +60,4 @@ The program will then initialize and function as shown in the demo.
 - Node.js
 
 ## Links
-* Github Repository URL: (https://github.com/KPetiote/Employee-Management-System)
+[Github Repository URL](https://github.com/KPetiote/Employee-Management-System)
