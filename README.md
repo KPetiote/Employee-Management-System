@@ -7,6 +7,7 @@
   * [Program Usage](#program-usage)
   * [Technologies](#technologies)
   * [Links](#links)
+  * [License](#license)
 
 ## Top Language
 ![Top Language](https://img.shields.io/github/languages/top/kpetiote/employee-management-system)
@@ -61,3 +62,7 @@ The program will then initialize and function as shown in the demo.
 
 ## Links
 [Github Repository URL](https://github.com/KPetiote/Employee-Management-System)
+
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
