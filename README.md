@@ -31,6 +31,7 @@ Once installed we can load the pre-defined Schema & Seeds to populate the databa
 These two files are located in the links below:
 
 [Schema](db/schema.sql)
+
 [Seeds](db/seeds.sql)
 
 Once loaded in the database use your command-line interface (Terminal - MACOSX, CMD - Windows)
