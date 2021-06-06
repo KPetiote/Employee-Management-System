@@ -3,6 +3,7 @@
   * [Top Language](#top-language)
   * [Description](#description)
   * [Demo](#demo)
+  * [Installation](#installation)
   * [Technologies](#technologies)
   * [Links](#links)
 
@@ -18,6 +19,20 @@ Upon refreshing, the data that was recently created will be there, and can be de
 ## Demo
 ![Alt text](./public/assets/images/employee-management-system-website.gif "Employee-Management-System")
  
+## Installation
+To use this program we will have to make sure to install Node.js
+Pleas use the link below to find a suitable version for your OS:
+
+https://nodejs.org/en/download/
+
+Once installed use your command-line interface (Terminal - MACOSX, CMD - Windows)
+to run browse to the main repository, then run the following command:
+
+```bash
+npm install
+```
+The package.json will install the necessary dependencies for the program to run.
+
 ## Technologies
 - Javascript
 - MySql
