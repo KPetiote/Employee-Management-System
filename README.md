@@ -1,1 +1,27 @@
 # Employee-Management-System
+## Table of Contents
+  * [Top Language](#top-language)
+  * [Description](#description)
+  * [Demo](#demo)
+  * [Technologies](#technologies)
+  * [Links](#links)
+
+## Top Language
+![Top Language](https://img.shields.io/github/languages/top/kpetiote/employee-management-system)
+
+## Description
+The purpose of this application is to allow users to manage an employee database.
+Upon first loading the program, the end-user is prompted to choose between options. 
+Users are allowed to add, remove or view employees, departments or employee titles.
+Upon refreshing, the data that was recently created will be there, and can be deleted or viewed.
+
+## Demo
+![Alt text](./public/assets/images/employee-management-system-website.gif "Employee-Management-System")
+ 
+## Technologies
+- Javascript
+- MySql
+- Node.js
+
+## Links
+* Github Repository URL: (https://github.com/KPetiote/Employee-Management-System)
