@@ -20,12 +20,19 @@ Upon refreshing, the data that was recently created will be there, and can be de
 ![Alt text](./public/assets/images/employee-management-system-website.gif "Employee-Management-System")
  
 ## Installation
-To use this program we will have to make sure to install Node.js
+To use this program we will need to install Node.js & MySQL Workbench.
 Pleas use the link below to find a suitable version for your OS:
 
 https://nodejs.org/en/download/
 
-Once installed use your command-line interface (Terminal - MACOSX, CMD - Windows)
+https://dev.mysql.com/downloads/workbench/
+
+Once installed we can load the pre-defined "schema.sql & seeds.sql" to populate the database.
+These two files are located in the links below:
+
+![Schema](db/schema.sql)
+
+Once loaded in the database use your command-line interface (Terminal - MACOSX, CMD - Windows)
 to run browse to the main repository, then run the following command:
 
 ```bash

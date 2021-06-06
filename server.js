@@ -4,6 +4,7 @@
 const mysql2 = require("mysql2");
 const figlet = require("figlet");
 const inquirer = require("inquirer");
+const consoleTable = require("console.table")
 
 // Uses NPM package "figlet" to create text banner.
 figlet("Employee \n \n Management \n \n System", (err, data) => {
