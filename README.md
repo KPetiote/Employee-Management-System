@@ -66,3 +66,5 @@ The program will then initialize and function as shown in the demo.
 ## License
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+Copyright (c) 2021 Kenneth Petiote
