@@ -3,7 +3,8 @@
   * [Top Language](#top-language)
   * [Description](#description)
   * [Demo](#demo)
-  * [Installation](#installation)
+  * [Program Installation](#program-installation)
+  * [Program Usage](#program-usage)
   * [Technologies](#technologies)
   * [Links](#links)
 
@@ -19,7 +20,7 @@ Upon refreshing, the data that was recently created will be there, and can be de
 ## Demo
 ![Alt text](./public/assets/images/employee-management-system-website.gif "Employee-Management-System")
  
-## Installation
+## Program Installation
 To use this program we will need to install Node.js & MySQL Workbench.\
 Please use the link below to download a suitable version for your OS:
 
@@ -35,14 +36,24 @@ These two files are located in the links below:
 [Seeds](db/seeds.sql)
 
 Once loaded in the database use your command-line interface\
-(Terminal - MacOS & Linux, CMD - Windows)\
+(Git/Terminal - MacOS, Linux & Ubuntu, CMD/Git - Windows)\
 to run browse to the main repository, then run the following command:
 
 ```bash
 npm install
 ```
+
 The package.json will install the necessary dependencies for the program to run.
 
+## Program Usage
+After using the program installation instructions, we can then start using the program\
+Remaining in the terminal, we can use the following command to run the application:
+
+```bash
+npm run start
+```
+
+The program will then initialize and function as shown in the demo.
 ## Technologies
 - Javascript
 - MySql
